@@ -33,5 +33,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  // Users
+  'POST /api/v1/users/register': 'users/register',
 
 };
