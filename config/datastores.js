@@ -51,8 +51,7 @@ module.exports.datastores = {
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
     adapter: require('sails-mysql'),
-    url: 'mysql://abgakyzta6nlriy1pmih:pscale_pw_KPThWACba4X28tEvebTy1Ls2hcLvRgucytPoca9bC21@ap-southeast.connect.psdb.cloud/wehack23?ssl={"rejectUnauthorized":true}',
-    //url: process.env.DATABASE_URL,
+    url: process.env.DATABASE_URL,
     ssl: true
   },
 
