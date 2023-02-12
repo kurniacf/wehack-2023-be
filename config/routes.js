@@ -33,6 +33,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  // Auth
+  'POST /api/v1/auth/check': 'auth/check',
+
   // Users
   'POST /api/v1/users/register': 'users/register',
   'POST /api/v1/users/login': 'users/login',
