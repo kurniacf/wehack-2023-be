@@ -45,4 +45,8 @@ module.exports.routes = {
   'GET /api/v1/users/view/:id': 'users/view',
   'POST /api/v1/users/update': 'users/update',
   'POST /api/v1/users/delete': 'users/delete',
+
+  // States
+  'GET /api/v1/states/view': 'states/view',
+  'GET /api/v1/states/view/:id': 'states/view',
 };
