@@ -34,7 +34,7 @@ module.exports = {
             let tokenHeader = credential[1];
             const data = await sails.helpers.decodeJwtToken(tokenHeader);
 
-            await User.updateOne({ id: data.id }).set({
+            User.updateOne({ id: data.id }).set({
                 name: inputs.name,
                 email: inputs.email,
                 gender: inputs.gender
