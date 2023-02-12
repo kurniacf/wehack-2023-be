@@ -33,23 +33,12 @@ module.exports = {
                 });
             }
 
-            let UserId = this.req.param('id');
+            let UserDB = await User.findOne({ id: data.id });
 
-            if (UserId) {
-                let UserDB = await User.findOne({ id: UserId });
-
-                return exits.success({
-                    message: `Success view User`,
-                    data: UserDB
-                });
-            } else {
-                let UserDB = await User.find();
-
-                return exits.success({
-                    message: `Success view all User`,
-                    data: UserDB
-                });
-            }
+            return exits.success({
+                message: `Success view User`,
+                data: UserDB
+            });
         } catch (error) {
             return exits.error({
                 message: 'Something went wrong',
