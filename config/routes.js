@@ -51,5 +51,6 @@ module.exports.routes = {
   'GET /api/v1/states/view/:id': 'states/view',
 
   // Projects
-  'GET /api/v1/projects/view/:region_id&:id': 'projects/view',
+  'GET /api/v1/projects/view': 'projects/view',
+  'GET /api/v1/projects/view/:region_id': 'projects/view',
 };
