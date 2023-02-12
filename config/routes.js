@@ -35,5 +35,11 @@ module.exports.routes = {
 
   // Users
   'POST /api/v1/users/register': 'users/register',
-
+  'POST /api/v1/users/login': 'users/login',
+  'POST /api/v1/users/forgot-password': 'users/forgot-password',
+  'POST /api/v1/users/reset-password': 'users/reset-password',
+  'GET /api/v1/users/view': 'users/view',
+  'GET /api/v1/users/view/:id': 'users/view',
+  'POST /api/v1/users/update': 'users/update',
+  'POST /api/v1/users/delete': 'users/delete',
 };
