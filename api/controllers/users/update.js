@@ -9,6 +9,10 @@ module.exports = {
         },
         email: {
             type: 'string'
+        },
+        gender: {
+            type: 'string',
+            isIn: ['male', 'female', 'non-binary', 'other']
         }
     },
 
@@ -32,7 +36,8 @@ module.exports = {
 
             await User.updateOne({ id: data.id }).set({
                 name: inputs.name,
-                email: inputs.email
+                email: inputs.email,
+                gender: inputs.gender
             });
             UserDB = await User.findOne({ id: data.id });
 

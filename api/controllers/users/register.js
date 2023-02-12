@@ -17,6 +17,11 @@ module.exports = {
       required: true,
       minLength: 6,
     },
+    gender: {
+      type: 'string',
+      required: true,
+      isIn: ['male', 'female', 'non-binary', 'other']
+    }
   },
   exits: {
     success: {
@@ -39,7 +44,8 @@ module.exports = {
       let newUser = await User.create({
         name: inputs.name,
         email: newEmailAddress,
-        password: inputs.password
+        password: inputs.password,
+        gender: inputs.gender
       });
 
       return exits.success({

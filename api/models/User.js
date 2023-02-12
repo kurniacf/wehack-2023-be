@@ -25,6 +25,11 @@ module.exports = {
       required: true,
       description: 'Securely hashed representation of the user\'s login password.',
     },
+    gender: {
+      type: 'string',
+      isIn: ['male', 'female', 'non-binary', 'other'],
+      defaultsTo: 'other',
+    },
     passwordResetToken: {
       type: 'string',
       description: 'A unique token used to verify the admin\'s identity when recovering a password.',
