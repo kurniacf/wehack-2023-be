@@ -23,21 +23,21 @@ module.exports = {
             let projectID = this.req.param('id');
 
             if (projectID) {
-                let projectData = await Projects.find({id: projectID});
+                let projectData = await Project.find({id: projectID});
 
                 return exits.success({
                     message: `Success view specific project`,
                     data: projectData
                 });
             } else if (regionID) {
-                let projectData = await Projects.find({region_id: regionID});
+                let projectData = await Project.find({region_id: regionID});
 
                 return exits.success({
                     message: `Success view all project by region`,
                     data: projectData
                 });
             } else {
-                let projectData = await Projects.find();
+                let projectData = await Project.find();
 
                 return exits.success({
                     message: `Success view all project`,
